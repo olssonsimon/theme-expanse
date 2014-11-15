@@ -30,30 +30,6 @@
   </head>
   <body{% if is_post or is_tag or is_page %} class="short-header"{% endif %}>
 
-    {% if is_login %}
-
-    {{ login_form }}
-
-    {% else %}
-    <header{% if is_post %} class="short"{% endif %}>
-      <div class="bg"></div>
-      <div class="spinner"></div>
-      <div class="shadow top"></div>
-      <div class="overlay"></div>
-      <div class="container wide">
-        <h1><a href="{{ site.base_url }}">{{ site.name }}</a></h1>
-        <h2 class="subtitle">A collection of chill tunes</h2>
-        {% if pages %}
-        <ul class="cover-nav">
-          <li><a href="{{ site.base_url }}">Blog</a></li>
-            {% for page in pages %}
-            <li><a href="{{ page.permalink }}" class="{{ set_active(page.permalink) }}">{{ page.title }}</a></li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-      </div>
-    </header>
-
     <div class="container content">
 
       <div class="bio">
