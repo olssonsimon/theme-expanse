@@ -32,60 +32,6 @@
 
     <div class="container content">
 
-      <div class="bio">
-        <a class="user-avatar">
-          <img src="{{ site.avatar }}" />
-        </a>
-        <div class="user-avatar-hover">
-          <h3>{{ site.author }}</h3>
-          <p>{{ site.bio|striptags|truncate(280, false, '...') }}</p>
-          <ul class="user-social-links">
-            {% if site.twitter %}
-            <li>
-              <a href="{{ site.twitter }}" title="Twitter" target="_blank">
-                <i class="icon-twitter"></i> Twitter
-              </a>
-            </li>
-            {% endif %}
-
-            {% if site.facebook %}
-            <li>
-              <a href="{{ site.facebook }}" title="Facebook" target="_blank">
-                <i class="icon-facebook-sign"></i> Facebook
-              </a>
-            </li>
-            {% endif %}
-
-            {% if site.googleplus %}
-            <li>
-              <a href="{{ site.googleplus }}?rel=author" title="Google+" target="_blank">
-                <i class="icon-google-plus"></i> Google+
-              </a>
-            </li>
-            {% endif %}
-
-            {% if site.linkedin %}
-            <li>
-              <a href="{{ site.linkedin }}" title="LinkedIn" target="_blank">
-                <i class="icon-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            {% endif %}
-            <li>
-              <a href="{{ site.atom_url }}" title="RSS" target="_blank">
-                <i class="icon-rss"></i> RSS
-              </a>
-            </li>
-          </ul>
-          <ul>
-            {% if theme.social.like %}<li>{{ theme.social.like }}</li>{% endif %}
-            {% if theme.social.follow %}<li>{{ theme.social.follow }}</li>{% endif %}
-            {% if theme.social.share %}<li>{{ theme.social.share }}</li>{% endif %}
-          </ul>
-          <div class="arrow"></div>
-        </div>
-      </div>
-
       <div class="post">
 
       {% if is_home or is_tag %}
